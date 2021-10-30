@@ -14,7 +14,7 @@
 <br>
 <img src="https://render.githubusercontent.com/render/math?math=\theta_1 = \phi_2 - \asin{\frac{L_2 \sin{\phi_1}}{\sqrt{x^2 %2B y^2}}}">
 <br>
-<img src="https://render.githubusercontent.com/render/math?math=\theta_2 = \pi - \phi_1 - \theta_1">
+<img src="https://render.githubusercontent.com/render/math?math=\theta_2 = \pi - \phi_1">
 <br>
 <img src="https://render.githubusercontent.com/render/math?math=\where \phi_1, \phi_2, \theta_1, \theta_2 \in \Re">
 <br>

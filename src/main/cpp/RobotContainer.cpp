@@ -3,9 +3,8 @@
 // the WPILib BSD license file in the root directory of this project.
 
 #include "RobotContainer.h"
-#include "frc2/command/InstantCommand.h"
-#include "frc2/command/RunCommand.h"
-#include "frc2/command/PerpetualCommand.h"
+#include "commands/MoveLeg.h"
+
 
 RobotContainer::RobotContainer() {
   // Initialize all of your commands and subsystems here
@@ -16,10 +15,7 @@ RobotContainer::RobotContainer() {
 
 void RobotContainer::ConfigureButtonBindings() {
   // Configure your button bindings here
-  leg.SetDefaultCommand(frc2::RunCommand([this] {
-    leg.Set(6.0 * controller.GetRawAxis(0), 
-      12.0 * controller.GetTriggerAxis(frc::GenericHID::JoystickHand::kRightHand) + 8.75);
-  }));
+  leg.SetDefaultCommand(MoveLeg(&leg, &controller));
 }
 
 frc2::Command* RobotContainer::GetAutonomousCommand() {
